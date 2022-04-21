@@ -1,1 +1,2 @@
-# chrome-gmail-demo
+# chrome-gmail
+A Gmail extension for Chrome

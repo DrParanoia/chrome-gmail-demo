@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Gmail extension for Chrome",
+    "short_name": "chrome-gmail",
+    "version": "0.1",
+    "author": "Arturs Ziborovs <arturs.ziborovs@gmail.com>",
+
+    "description": "An extension for e-mail messages",
+
+    "content_scripts": [
+        {
+            "matches": [ "*://mail.google.com/*" ],
+            "js": [
+                "dist/extension-injector.js"
+            ],
+            "css": [
+                "dist/css/main.min.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+
+    "web_accessible_resources": [{
+        "resources": [
+            "dist/extension.js"
+        ],
+        "matches": ["<all_urls>"]
+    }],
+    "host_permissions": [
+        "https://*/*"
+    ]
+}

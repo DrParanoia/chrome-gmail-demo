@@ -1,0 +1,11 @@
+.button- {
+    @import 'buttons';
+}
+
+.thread-status-logo {
+    height: 16px;
+
+    &.disabled {
+        filter: grayscale(100%);
+    }
+}
